@@ -1,14 +1,4 @@
 # ASP.NET
-- task: CmdLine@2
-  inputs:
-    script: |
-      aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 159249256729.dkr.ecr.us-east-1.amazonaws.com
-      docker build -t abhinav .
-      docker tag abhinav:latest 159249256729.dkr.ecr.us-east-1.amazonaws.com/abhinav:latest
-      docker push 159249256729.dkr.ecr.us-east-1.amazonaws.com/abhinav:latest
-# Build and test ASP.NET projects.
-# Add steps that publish symbols, save build artifacts, deploy, and more:
-# https://docs.microsoft.com/azure/devops/pipelines/apps/aspnet/build-aspnet-4
 
 trigger:
 - master
